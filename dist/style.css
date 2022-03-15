@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Roboto&display=swap");
+
+:root {
+  --primary: hsla(348, 97%, 63%, 0.65);
+  --secondary: hsla(230, 96%, 62%, 0.65);
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: #ececec;
+}
+
+h1,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+.welcome {
+  width: 100%;
+  height: 50vh;
+  background: linear-gradient(135deg, var(--primary), var(--secondary)),
+    url("https://pbs.twimg.com/media/EfZZxufWoAEYlcf?format=jpg&name=large")
+      no-repeat,
+    center center / cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.img-welcome {
+  display: flex;
+  justify-content: center;
+}
+
+.img-welcome img {
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  border: 7px solid black;
+}
+
+.paragraph-welcome {
+  width: 500px;
+}
+
+@media (max-width: 800px) {
+  .welcome {
+    flex-direction: column;
+    gap: 0px;
+    height: auto;
+  }
+  .img-welcome {
+    margin: 14px;
+  }
+  .img-welcome img {
+    width: 40%;
+    height: auto;
+    border-radius: 50%;
+    border: 10px solid black;
+  }
+  .paragraph-welcome {
+    width: 80%;
+  }
+}
+.card {
+  margin: 10px 10% 10px 10%;
+  background: white;
+  border-radius: 20px;
+}
+.separator {
+  background-color: black;
+  height: 7px;
+}
+
+.separator-small {
+  border-top: 7px solid black;
+  padding: 0;
+  margin: -7px auto 0 auto;
+  color: white;
+  width: 64px;
+}
+
+.about-us {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px 10px;
+}
+
+.about-us div {
+  display: flex;
+  justify-content: center;
+}
+
+.about-us .about-us-description {
+  margin: 10px 15% 10px 15%;
+  text-align: center;
+  color: grey;
+}
+
+.gallery {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px 10px;
+}
+
+.gallery div {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery .gallery-carousel {
+  overflow-x: scroll;
+  height: fit-content;
+  display: flex;
+  gap: 20px;
+  white-space: nowrap;
+  margin: 20px 6% 19px;
+}
+
+.gallery .gallery-carousel img {
+  border-radius: 5px;
+  height: 232px;
+  min-height: 232px;
+  width: 408px;
+  object-fit: cover;
+}
+
+.video-responsive {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  position: relative;
+}
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+  height: 80%;
+  left: 10;
+  position: absolute;
+  top: -2;
+  width: 80%;
+}
